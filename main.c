@@ -49,17 +49,17 @@ int main(void) {
 
         }
         else {
-            printf("Senha inválida!");
+            printf("Senha invï¿½lida!");
         }
     }
     else {
-        printf("Login inválido!");
+        printf("Login invï¿½lido!");
     }
 
     if (logado == 'S') {
         fflush(stdin);
         FILE *ponteiroArquivo;
-        ponteiroArquivo=(fopen("cadastros.txt", "a"));
+        ponteiroArquivo=(fopen("Cadastros.txt", "a"));
         printf("\n\nNome do paciente: ");
         fgets(pac.nome, 100, stdin);
         printf("CPF: ");
@@ -116,7 +116,7 @@ int main(void) {
             fgets(pac.quais, 100, stdin);
         }
         else{
-            strcpy(pac.comorbidade, "NÃO");
+            strcpy(pac.comorbidade, "Nï¿½O");
             strcpy(pac.quais, "Nenhum");
         }
         printf("\n");
@@ -126,7 +126,7 @@ int main(void) {
         fprintf(ponteiroArquivo, "Telefone: %s", pac.telefone);
         fprintf(ponteiroArquivo, "\nCEP: %s", pac.cep);
         fprintf(ponteiroArquivo, "\nRua: %s", pac.rua);
-        fprintf(ponteiroArquivo, "\nNúmero: %i\n", pac.numero);
+        fprintf(ponteiroArquivo, "\nNï¿½mero: %i\n", pac.numero);
         fprintf(ponteiroArquivo, "Bairro: %s", pac.bairro);
         fprintf(ponteiroArquivo, "\nCidade: %s", pac.cidade);
         fprintf(ponteiroArquivo, "\nEstado: %s", pac.estado);
@@ -137,7 +137,7 @@ int main(void) {
         calcidade = anoAtual - pac.ano;
         if (calcidade > 65 || risco == 1) {
             FILE *ponteiroRisco;
-            ponteiroRisco=(fopen("grupoderisco.txt", "a"));
+            ponteiroRisco=(fopen("Grupo-de-risco.txt", "a"));
             fprintf(ponteiroRisco, "\nCEP: %s", pac.cep);
             fprintf(ponteiroRisco, "\nIdade: %d\n", calcidade);
             printf("\n\nO Paciente pertencente ao grupo de risco.\n");
